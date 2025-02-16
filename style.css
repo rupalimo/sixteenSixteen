@@ -1,0 +1,56 @@
+@keyframes spin {
+}
+
+:root {
+	--primary-font: 'Arial', sans-serif;
+	--secondary-font: 'Times', serif;
+	--body-text-color: #2f2929;
+	--title-text-color: rgb(0, 38, 255);
+
+	color: var(--body-text-color);
+	font-family: var(--primary-font);
+	cursor: default;
+	font-size: calc(0.5em + 1vw);
+	letter-spacing: 0.0025em;
+	-webkit-animation: var(--fade-in-effect);
+	-moz-animation: var(--fade-in-effect);
+	-ms-animation: var(--fade-in-effect);
+	-o-animation: var(--fade-in-effect);
+	animation: var(--fade-in-effect);
+}
+
+::selection {
+	background: var(--accent-color);
+	color: #fff;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	line-height: 1.2em;
+	scroll-behavior: smooth;
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+ul {
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+body {
+	height: 100vh;
+	width: 98vw;
+	margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 780px) {
+}

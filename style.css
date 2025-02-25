@@ -10,7 +10,7 @@
 	color: var(--body-text-color);
 	font-family: var(--primary-font);
 	cursor: default;
-	font-size: calc(0.5em + 1vw);
+	font-size: calc(0.35em + 1vw);
 	letter-spacing: 0.0025em;
 	-webkit-animation: var(--fade-in-effect);
 	-moz-animation: var(--fade-in-effect);
@@ -51,6 +51,7 @@ body {
 
 header {
 text-align: center;
+position: relative;
 }
 
 header h3 {
@@ -61,8 +62,11 @@ header p {
 	margin: 0rem;
 }
 
+/* STYLING FOR DROP DOWN NAVIGATION MENU */
 .nav-dropdown {
 	margin: 2rem 0;
+	position: sticky;
+	top: 1rem;
 }
 
 .nav-dropdown select {
@@ -72,11 +76,12 @@ header p {
 	color: var(--title-text-color);
 }
 
+/* STYLING FOR PAGE SECTIONS */
 .page-section  {
 	display: none;
 }
 
-.exhibition {
+.exhibition, .archive, .printed, .artists {
 	display: block;
 }
 

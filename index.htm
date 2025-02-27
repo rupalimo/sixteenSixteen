@@ -31,26 +31,25 @@
 				<p>00 location st</p>
 				<p>City, 000 000</p>
 			</div>
-			
 		</header>
 		<nav class="nav-dropdown">
-				<select
-					class="page-toggle"
-					data-target=".main__wrapper"
-					aria-label="Page selection"
-				>
-					<option selected value="exhibition" data-show=".exhibition">
-						exhibition
-					</option>
-					<option value="archive" data-show=".archive">archive</option>
-					<option value="printed" data-show=".printed">printed</option>
-					<option value="artists" data-show=".artists">artists</option>
-				</select>
-			</nav>
+			<select
+				class="page-toggle"
+				data-target=".main__wrapper"
+				aria-label="Page selection"
+			>
+				<option selected value="exhibition" data-show=".exhibition">
+					exhibition
+				</option>
+				<option value="archive" data-show=".archive">archive</option>
+				<option value="printed" data-show=".printed">printed</option>
+				<option value="artists" data-show=".artists">artists</option>
+			</select>
+		</nav>
 
 		<main class="main__wrapper">
 			<div class="page-section exhibition">
-				<span><h5>Now</h5></span>
+				<h5>Now</h5>
 				<a class="exhibition__container" href="" title="">
 					<div class="exhibition--details">
 						<h2>Date</h2>
@@ -106,8 +105,111 @@
 				</a>
 				<button>go to archives</button>
 			</div>
-			<div class="page-section archive">archive section</div>
-			<div class="page-section printed">printed section</div>
+			<div class="page-section archive">
+				<span class="tab__container">
+					<button
+						onclick="archiveToggle(event, 'all-archive')"
+						id="defaultOpen"
+						class="tab--item archiveTab"
+					>
+						All
+					</button>
+					<button
+						onclick="archiveToggle(event, '2025-archive')"
+						class="tab--item archiveTab"
+					>
+						2025
+					</button>
+				</span>
+
+				<div id="all-archive" class="archive__container">
+					<div class="exhibition--details">
+						<h2>Date</h2>
+						<h2>Show's Name</h2>
+						<h2>Artist's Name</h2>
+					</div>
+
+					<div class="exhibition--details">
+						<h2>Date</h2>
+						<h2>Show's Name</h2>
+						<h2>Artist's Name</h2>
+					</div>
+					<div class="exhibition--details">
+						<h2>Date</h2>
+						<h2>Show's Name</h2>
+						<h2>Artist's Name</h2>
+					</div>
+				</div>
+
+				<div id="2025-archive" class="archive__container">
+					<div class="exhibition--details">
+						<h2>Date</h2>
+						<h2>Show's Name</h2>
+						<h2>Artist's Name</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="page-section printed">
+				<span class="tab__container">
+					<button
+						onclick="printedToggle(event, 'all-printed')"
+						id="defaultOpen"
+						class="tab--item printedTab"
+					>
+						All
+					</button>
+					<button
+						onclick="printedToggle(event, 'limited-printed')"
+						class="tab--item printedTab"
+					>
+						2025
+					</button>
+				</span>
+
+				<div id="all-printed" class="printed__container">
+					<a class="printed--item" href="" target="_blank" title="">
+						<img width="200px" src="" title="printed-img" />
+						<p>title</p>
+						<p>artist name</p>
+						<p>$00,00</p>
+					</a>
+					<a class="printed--item" href="" target="_blank" title="">
+						<img width="200px" src="" title="printed-img" />
+						<p>title</p>
+						<p>artist name</p>
+						<p>$00,00</p>
+					</a>
+					<a class="printed--item" href="" target="_blank" title="">
+						<img width="200px" src="" title="printed-img" />
+						<p>title</p>
+						<p>artist name</p>
+						<p>$00,00</p>
+					</a>
+					<a class="printed--item" href="" target="_blank" title="">
+						<img width="200px" src="" title="printed-img" />
+						<p>title</p>
+						<p>artist name</p>
+						<p>$00,00</p>
+					</a>
+					<a class="printed--item" href="" target="_blank" title="">
+						<img width="200px" src="" title="printed-img" />
+						<p>title</p>
+						<p>artist name</p>
+						<p>$00,00</p>
+					</a>
+				</div>
+
+				<div id="limited-printed" class="printed__container">
+					<a class="printed--item" href="" target="_blank" title="">
+						<img width="200px" src="" title="printed-img" />
+						<p>title</p>
+						<p>artist name</p>
+						<p>$00,00</p>
+					</a>
+				</div>
+			</div>
+
 			<div class="page-section artists">artists section</div>
 		</main>
 

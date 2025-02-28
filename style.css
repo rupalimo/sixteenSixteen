@@ -3,6 +3,7 @@
 	--secondary-font: 'Times', serif;
 	--text-color: #2f2929;
 	--primary-color: rgb(0, 38, 255);
+	--grey: rgb(177, 177, 177);
 	color: var(--text-color);
 	font-family: var(--primary-font);
 	cursor: default;
@@ -65,17 +66,25 @@ header p {
 	width: 100%;
 	text-align: center;
 	text-transform: uppercase;
-	color: var(--title-text-color);
+	color: var(--primary-color);
 }
 
 /* STYLING FOR PAGE SECTIONS */
 
-h2 {
+h2,
+h5 {
 	font-weight: normal;
+}
+
+h5,
+.tab--item {
+	text-transform: uppercase;
+	font-size: 0.65rem;
 }
 
 .page-section {
 	display: none;
+	text-align: center;
 }
 
 .exhibition,
@@ -86,23 +95,26 @@ h2 {
 }
 
 .tab--item {
-	color: var(--title-color);
-	border-radius: 0;
+	color: var(--grey);
+	background: white;
+	font-weight: normal;
+	text-transform: uppercase;
+	border: none;
 }
 
 .active,
-.active:hover {
-	color: grey;
+.active:hover, h5 {
+	color: var(--primary-color);
 }
 
 .active::before {
-	content: "(";
-	color: grey;
+	content: '(';
+	color: var(--primary-color);
 }
 
 .active::after {
-	content: ")";
-	color: grey;
+	content: ')';
+	color: var(--primary-color);
 }
 
 @media (max-width: 1024px) {

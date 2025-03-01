@@ -51,6 +51,11 @@ body {
 
 /* STYLING FOR TOP & BOTTOM 1616 TITLE HEADER */
 
+header, nav, main, footer  {
+	width: 60%;
+	margin: 0 auto;
+}
+
 header, footer {
 	text-align: center;
 	font-family: var(--secondary-font);
@@ -74,10 +79,10 @@ footer {
 
 /* STYLING FOR DROP DOWN NAVIGATION MENU */
 .nav-dropdown {
-	margin: 2rem 0;
 	position: sticky;
-	top: 1rem;
-	width: 100%;
+	top: 12px;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	text-align: center;
 	text-transform: uppercase;
 	color: var(--text-color);
@@ -193,7 +198,7 @@ margin-bottom: 2rem;
 }
 
 .horizontal-divider {
-	width: 100%;
+	width: inherit;
 	height: 2rem;
 	margin-bottom: 2rem;
 	border-bottom: 1px dotted var(--grey);
@@ -254,7 +259,7 @@ margin-bottom: 2rem;
 }
 
 .printed--flex .printed--item {
-	width: 25%;
+	width: 33%;
 	margin-bottom: 4rem;
 }
 

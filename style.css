@@ -74,15 +74,16 @@ footer {
 
 /* STYLING FOR DROP DOWN NAVIGATION MENU */
 .nav-dropdown {
-	margin: 2rem 0;
+	margin-bottom: 2rem;
 	position: sticky;
-	top: 1rem;
+	top: 1vw;
 	width: 100%;
 	text-align: center;
 	text-transform: uppercase;
 	color: var(--text-color);
 	border: 1px solid var(--text-color);
-	border-radius: 0;
+	border-radius: 1rem;
+	box-shadow: var(--grey) 0 0 12px 1px inset;
 	background: white;
 	cursor: pointer;
 	display: grid;

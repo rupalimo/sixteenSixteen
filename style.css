@@ -3,6 +3,7 @@
 	--secondary-font: 'Times', serif;
 	--text-color: #2f2929;
 	--primary-color: rgb(0, 38, 255);
+	--secondary-color: #834a00;
 	--grey: rgb(177, 177, 177);
 	color: var(--text-color);
 	font-family: var(--primary-font);
@@ -17,14 +18,14 @@
 }
 
 ::selection {
-	background: var(--accent-color);
+	background: var(--text-color);
 	color: #fff;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 * {
@@ -48,8 +49,12 @@ body {
 	margin: 0 auto;
 }
 
-header {
+/* STYLING FOR TOP & BOTTOM 1616 TITLE HEADER */
+
+header, footer {
 	text-align: center;
+	font-family: var(--secondary-font);
+	color: var(--secondary-color);
 }
 
 header h3 {
@@ -58,6 +63,13 @@ header h3 {
 
 header p {
 	margin: 0rem;
+	font-size: 12px;
+}
+
+footer {
+	display: none;
+	border-top: 1px solid var(--secondary-color);
+	margin: 4rem 0 2rem 0;
 }
 
 /* STYLING FOR DROP DOWN NAVIGATION MENU */
@@ -75,18 +87,18 @@ header p {
 	cursor: pointer;
 	display: grid;
 	align-items: center;
-	grid-template-areas: "select";
+	grid-template-areas: 'select';
 }
 
 .nav-dropdown::after {
-  content: "";
-  width: 0.8em;
-  height: 0.5em;
-  background-color: var(--text-color);
-  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+	content: '';
+	width: 0.8em;
+	height: 0.5em;
+	background-color: var(--text-color);
+	clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 	grid-area: select;
-		justify-self: end;
-		margin-right: 0.5rem;
+	justify-self: end;
+	margin-right: 0.5rem;
 }
 
 .nav-dropdown select {
@@ -101,6 +113,7 @@ header p {
 	cursor: inherit;
 	font-size: inherit;
 	font-family: inherit;
+	font-size: 0.8rem;
 	line-height: inherit;
 	margin: 0;
 	padding: 0;
@@ -108,25 +121,14 @@ header p {
 }
 
 .nav-dropdown select::-ms-expand {
-  display: none;
+	display: none;
 }
 
-.nav-dropdown  option {
-		text-transform: uppercase;
-}
-
-/* STYLING FOR PAGE SECTIONS */
-
-h2,
-h5 {
-	font-weight: normal;
-}
-
-h5,
-.tab--item {
+.nav-dropdown option {
 	text-transform: uppercase;
-	font-size: 0.65rem;
 }
+
+/* STYLING FOR PAGE*/
 
 .page-section {
 	display: none;
@@ -149,7 +151,8 @@ h5,
 }
 
 .active,
-.active:hover, h5 {
+.active:hover,
+h5 {
 	color: var(--primary-color);
 }
 
@@ -161,6 +164,114 @@ h5,
 .active::after {
 	content: ')';
 	color: var(--primary-color);
+}
+
+h2,
+h5 {
+	font-weight: normal;
+}
+
+h2 {
+	margin: 0;
+}
+
+h5,
+.tab--item {
+	text-transform: uppercase;
+	font-size: 0.65rem;
+}
+
+.exhibition button {
+color: var(--primary-color);
+text-decoration: underline;
+border: none;
+appearance: none;
+background-color: #fff;
+font-size: 1rem;
+font-family: var(--secondary-font);
+margin-bottom: 2rem;
+}
+
+.horizontal-divider {
+	width: 100%;
+	height: 2rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px dotted var(--grey);
+}
+
+.exhibition__container,
+.archive__container,
+.printed__container,
+.artists__container {
+	text-decoration: none;
+}
+
+.exhibition--details h2 {
+	color: var(--text-color);
+}
+
+.exhibition--details h2:nth-child(2) {
+	font-style: italic;
+}
+
+.exhibition--details h2:nth-child(3) {
+	color: var(--grey);
+}
+
+.exhibition--details h2,
+.printed--item,
+.artists__container a {
+	font-family: var(--secondary-font);
+}
+
+.exhibition--details,
+.printed--item,
+.artists__container a {
+	text-decoration: none;
+}
+
+.archive__container .exhibition--details {
+	margin: 1rem;
+}
+
+.printed__container {
+	margin: 1.5rem 0;
+}
+
+.printed__container p {
+	margin: 0;
+}
+
+.artists__container {
+	font-size: 1.5rem;
+	margin: 1rem 0;
+}
+
+.printed--flex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.printed--flex .printed--item {
+	width: 25%;
+	margin-bottom: 4rem;
+}
+
+.printed--item,
+.artists__container a {
+	color: var(--text-color);
+}
+
+.printed--item {
+	font-family: var(--primary-font);
+}
+
+.tab__container {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 @media (max-width: 1024px) {

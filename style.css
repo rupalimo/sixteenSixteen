@@ -21,8 +21,13 @@
 	color: #fff;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
-	box-sizing: border-box;
 	line-height: 1.2em;
 	scroll-behavior: smooth;
 	-webkit-text-size-adjust: 100%;
@@ -60,17 +65,54 @@ header p {
 	margin: 2rem 0;
 	position: sticky;
 	top: 1rem;
+	width: 100%;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--text-color);
+	border: 1px solid var(--text-color);
+	border-radius: 0;
+	background: white;
+	cursor: pointer;
+	display: grid;
+	align-items: center;
+	grid-template-areas: "select";
+}
+
+.nav-dropdown::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: var(--text-color);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+	grid-area: select;
+		justify-self: end;
+		margin-right: 0.5rem;
 }
 
 .nav-dropdown select {
 	width: 100%;
 	text-align: center;
 	text-transform: uppercase;
-	color: var(--text-color);
 	appearance: none;
-	border: 1px solid var(--text-color);
+	outline: none;
+	border: none;
 	border-radius: 0;
-	background: white;
+	background: transparent;
+	cursor: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	line-height: inherit;
+	margin: 0;
+	padding: 0;
+	grid-area: select;
+}
+
+.nav-dropdown select::-ms-expand {
+  display: none;
+}
+
+.nav-dropdown  option {
+		text-transform: uppercase;
 }
 
 /* STYLING FOR PAGE SECTIONS */

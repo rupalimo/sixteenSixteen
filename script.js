@@ -7,6 +7,11 @@ $(document).ready(function () {
 		$(selectedClass).fadeIn();
 	});
 
+$('.navigate-to-tab').on('click', function () {
+	var targetArchive = $(this).data('value');
+	$('.page-toggle').val(targetArchive).change();
+});
+
 	$('.page-section').hide();
 	$('.page-toggle option:selected').each(function () {
 		var selectedClass = $(this).attr('data-show');
@@ -22,18 +27,22 @@ function archiveToggle(evt, tabName) {
 	}
 
 	// Get all elements with class="archiveTab" and remove the class "active"
-	archiveTab = document.getElementsByClassName('archiveTab');
-	for (i = 0; i < archiveTab.length; i++) {
-		archiveTab[i].className = archiveTab[i].className.replace(' active', '');
+	var archiveTab = document.getElementsByClassName('archiveTab');
+	for (var i = 0; i < archiveTab.length; i++) {
+		archiveTab[i].classList.remove('active');
 	}
 
 	// Show the current tab, and add an "active" class to the button that opened the tab
 	document.getElementById(tabName).style.display = 'block';
-	evt.currentTarget.className += ' active';
+	evt.currentTarget.classList.add('active');
 }
 
-document.getElementById('defaultArchive').click();
-
+document.addEventListener('DOMContentLoaded', function () {
+	var defaultArchive = document.getElementById('defaultArchive');
+	if (defaultArchive) {
+		defaultArchive.click();
+	}
+});
 
 // Printed Tabs
 function printedToggle(evt, tabName) {
@@ -43,18 +52,22 @@ function printedToggle(evt, tabName) {
 	}
 
 	// Get all elements with class="printedTab" and remove the class "active"
-	printedTab = document.getElementsByClassName('printedTab');
-	for (i = 0; i < printedTab.length; i++) {
-		printedTab[i].className = printedTab[i].className.replace(' active', '');
+	var printedTab = document.getElementsByClassName('printedTab');
+	for (var i = 0; i < printedTab.length; i++) {
+		printedTab[i].classList.remove('active');
 	}
 
 	// Show the current tab, and add an "active" class to the button that opened the tab
 	document.getElementById(tabName).style.display = 'block';
-	evt.currentTarget.className += ' active';
+	evt.currentTarget.classList.add('active');
 }
 
-document.getElementById('defaultPrinted').click();
-
+document.addEventListener('DOMContentLoaded', function () {
+	var defaultPrinted = document.getElementById('defaultPrinted');
+	if (defaultPrinted) {
+		defaultPrinted.click();
+	}
+});
 
 // Artists Tabs
 function artistsToggle(evt, tabName) {
@@ -64,14 +77,19 @@ function artistsToggle(evt, tabName) {
 	}
 
 	// Get all elements with class="printedTab" and remove the class "active"
-	artistsTab = document.getElementsByClassName('artistsTab');
-	for (i = 0; i < artistsTab.length; i++) {
-		artistsTab[i].className = printedTab[i].className.replace(' active', '');
+	var artistsTab = document.getElementsByClassName('artistsTab');
+	for (var i = 0; i < artistsTab.length; i++) {
+		artistsTab[i].classList.remove('active');
 	}
 
 	// Show the current tab, and add an "active" class to the button that opened the tab
 	document.getElementById(tabName).style.display = 'block';
-	evt.currentTarget.className += ' active';
+	evt.currentTarget.classList.add('active');
 }
 
-document.getElementById('defaultArtists').click();
+document.addEventListener('DOMContentLoaded', function () {
+	var defaultArtists = document.getElementById('defaultArtists');
+	if (defaultArtists) {
+		defaultArtists.click();
+	}
+});

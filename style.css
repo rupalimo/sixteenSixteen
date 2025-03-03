@@ -270,6 +270,7 @@ h5,
 @media (max-width: 1024px) {
 	header, nav, main, footer  {
 	width: 95%;
+	min-width: 95%;
 	margin: 0 auto;
 }
 }

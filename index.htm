@@ -27,9 +27,12 @@
 		<header>
 			<div class="header__container">
 				<!-- <h3>1616</h3> -->
-				<img src="1616-header/sixteensixteeeen.svg" title="sixteensixteen" alt="sixteensixteen" />
-				<p>00 location st</p>
-				<p>City, 000 000</p>
+				<img
+					src="1616-header/sixteensixteeeeeen.svg"
+					title="sixteensixteen"
+					alt="sixteensixteen"
+				/>
+				<p>00 location st | City, 000 000</p>
 			</div>
 		</header>
 		<nav class="nav-dropdown">
@@ -39,74 +42,57 @@
 				aria-label="Page selection"
 			>
 				<option selected value="exhibition" data-show=".exhibition">
-					exhibition
+					EXHIBITION
 				</option>
-				<option value="archive" data-show=".archive">archive</option>
-				<option value="printed" data-show=".printed">printed</option>
-				<option value="artists" data-show=".artists">artists</option>
+				<option value="archive" data-show=".archive">ARCHIVE</option>
+				<option value="printed" data-show=".printed">PRINTED</option>
+				<option value="artists" data-show=".artists">ARTISTS</option>
 			</select>
 		</nav>
 
 		<main class="main__wrapper">
 			<div class="page-section exhibition">
-				<span><h5>Now</h5></span>
-				<a class="exhibition__container" href="" title="">
-					<div class="exhibition--details">
-						<h2>Date</h2>
-						<h2>Show's Name</h2>
-						<h2>Artist's Name</h2>
-					</div>
-					<div class="exhibition--img">
-						<img src="" title="exhibition img" width="200px" height="200px" />
-					</div>
-				</a>
-				<div class="horizontal-divider"></div>
-				<span><h5>Next</h5></span>
-				<a class="exhibition__container" href="" title="">
-					<div class="exhibition--details">
-						<h2>Date</h2>
-						<h2>Show's Name</h2>
-						<h2>Artist's Name</h2>
-					</div>
-					<div class="exhibition--img">
-						<img src="" title="" width="" />
-					</div>
-				</a>
-				<div class="horizontal-divider"></div>
-				<span><h5>Past</h5></span>
-				<a class="exhibition__container" href="" title="">
-					<div class="exhibition--details">
-						<h2>Date</h2>
-						<h2>Show's Name</h2>
-						<h2>Artist's Name</h2>
-					</div>
-					<div class="exhibition--img">
-						<img src="" title="" width="" />
-					</div>
-				</a>
-				<a class="exhibition__container" href="" title="">
-					<div class="exhibition--details">
-						<h2>Date</h2>
-						<h2>Show's Name</h2>
-						<h2>Artist's Name</h2>
-					</div>
-					<div class="exhibition--img">
-						<img src="" title="" width="" />
-					</div>
-				</a>
-				<a class="exhibition__container" href="" title="">
-					<div class="exhibition--details">
-						<h2>Date</h2>
-						<h2>Show's Name</h2>
-						<h2>Artist's Name</h2>
-					</div>
-					<div class="exhibition--img">
-						<img src="" title="" width="" />
-					</div>
-				</a>
-				<button class="navigate-to-tab" data-value="archive">
-					view more
-				</button>
+				<span class="tab__container">
+					<button
+						onclick="exhibitionToggle(event, 'now-exhibition')"
+						id="defaultExhibition"
+						class="tab--item exhibitionTab"
+					>
+						Now
+					</button>
+					<button
+						onclick="exhibitionToggle(event, 'next-exhibition')"
+						class="tab--item exhibitionTab"
+					>
+						Next
+					</button>
+				</span>
+
+				<div id="now-exhibition" class="exhibition__container">
+					<a href="" title="" target="_blank" class="exhibition--details">
+						<div class="exhibition--details">
+							<h2>Now Date</h2>
+							<h2>Show's Name</h2>
+							<h2>Artist's Name</h2>
+						</div>
+						<div class="exhibition--img">
+							<img src="" title="exhibition img" width="200px" height="200px" />
+						</div>
+					</a>
+				</div>
+
+				<div id="next-exhibition" class="exhibition__container">
+					<a href="" title="" target="_blank" class="exhibition--details">
+						<div class="exhibition--details">
+							<h2>Next Date</h2>
+							<h2>Show's Name</h2>
+							<h2>Artist's Name</h2>
+						</div>
+						<div class="exhibition--img">
+							<img src="" title="exhibition img" width="200px" height="200px" />
+						</div>
+					</a>
+				</div>
 			</div>
 			<div class="page-section archive">
 				<span class="tab__container">

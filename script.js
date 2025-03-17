@@ -19,6 +19,67 @@ $('.navigate-to-tab').on('click', function () {
 	});
 });
 
+var sixteensixteens = [
+	'1616-header/sixteen.svg',
+	'1616-header/sixteensixteeeeeen.svg',
+	'1616-header/sixteensixteeeeen.svg',
+	'1616-header/sixteensixteeeen.svg',
+	'1616-header/sixteensixteeen.svg',
+	'1616-header/sixteensixteen.svg',
+];
+
+// Dropdown Page Navigation (jQuery):
+$(document).ready(function () {
+	var randomNumber = Math.floor(Math.random() * sixteensixteens.length);
+	$('#sixteen').attr('src', sixteensixteens[randomNumber]);
+
+	$('.page-toggle').on('change', function () {
+		var selectedClass = $(this).find(':selected').attr('data-show');
+
+		// hide-show page sections accordingly
+		$('.page-section').hide();
+		$(selectedClass).fadeIn();
+	});
+
+	$('.navigate-to-tab').on('click', function () {
+		var targetArchive = $(this).data('value');
+		$('.page-toggle').val(targetArchive).change();
+	});
+
+	$('.page-section').hide();
+	$('.page-toggle option:selected').each(function () {
+		var selectedClass = $(this).attr('data-show');
+		$(selectedClass).show();
+	});
+});
+
+// Exhibition Tabs
+function exhibitionToggle(evt, tabName) {
+	var exhibitionSection = document.getElementsByClassName(
+		'exhibition__container'
+	);
+	for (var i = 0; i < exhibitionSection.length; i++) {
+		exhibitionSection[i].style.display = 'none';
+	}
+
+	// Get all elements with class="archiveTab" and remove the class "active"
+	var exhibitionTab = document.getElementsByClassName('exhibitionTab');
+	for (var i = 0; i < exhibitionTab.length; i++) {
+		exhibitionTab[i].classList.remove('active');
+	}
+
+	// Show the current tab, and add an "active" class to the button that opened the tab
+	document.getElementById(tabName).style.display = 'block';
+	evt.currentTarget.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+	var defaultExhibition = document.getElementById('defaultExhibition');
+	if (defaultExhibition) {
+		defaultExhibition.click();
+	}
+});
+
 // Archive Tabs
 function archiveToggle(evt, tabName) {
 	var archiveSection = document.getElementsByClassName('archive__container');

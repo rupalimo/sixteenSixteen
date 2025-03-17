@@ -24,17 +24,6 @@
 	</head>
 
 	<body>
-		<header>
-			<div class="header__container">
-				<!-- <h3>1616</h3> -->
-				<img id="sixteen"
-					src="1616-header/sixteen.svg"
-					title="sixteensixteen"
-					alt="sixteensixteen"
-				/>
-				<p>00 location st | City, 000 000</p>
-			</div>
-		</header>
 		<nav class="nav-dropdown">
 			<select
 				class="page-toggle"
@@ -94,11 +83,14 @@
 						</div>
 					</a>
 				</div>
-				<button class="navigate-to-tab" data-value="archive">
+				<button class="navigate-to-archive" data-value="archive">
 					view archived exhibitions
 				</button>
+				<button class="navigate-to-info" data-value="info">
+					1616
+				</button>
 			</div>
-			
+
 			<div class="page-section archive">
 				<span class="tab__container">
 					<button
@@ -142,6 +134,9 @@
 						<h2>Artist's Name</h2>
 					</a>
 				</div>
+						<button class="navigate-to-info" data-value="info">
+					1616
+				</button>
 			</div>
 
 			<div class="page-section printed">
@@ -206,6 +201,9 @@
 						</a>
 					</div>
 				</div>
+						<button class="navigate-to-info" data-value="info">
+					1616
+				</button>
 			</div>
 
 			<div class="page-section artists">
@@ -239,19 +237,28 @@
 				<div id="MZ-artists" class="artists__container">
 					<a href="" title="" target="_blank">M-Z Artists</a>
 				</div>
+				<button class="navigate-to-info" data-value="info">
+					1616
+				</button>
 			</div>
-						<div class="page-section info">
-				<span><h5>1616</h5></span>
-				<p>Paragraph descriptor text</p>
+			<div class="page-section info">
+				<span><h5>&#8675; &#8675; &#8675;</h5></span>
+				<div class="info__container">
+					<div class="info--flex">
+						<img
+							width="350px"
+							src="1616-header-lrg/sixteen.svg"
+							title="sixteensixteen"
+						/>
+						<p>00 location st | City, 000 000</p>
+					</div>
+				</div>
 			</div>
 		</main>
 
-		<footer>
-			<p></p>
-			<p></p>
-		</footer>
+		<footer></footer>
 
-			<script
+		<script
 			src="https://code.jquery.com/jquery-3.7.1.min.js"
 			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
 			crossorigin="anonymous"

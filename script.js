@@ -20,9 +20,14 @@ $(document).ready(function () {
 		$(selectedClass).fadeIn();
 	});
 
-	$('.navigate-to-tab').on('click', function () {
+	$('.navigate-to-archive').on('click', function () {
 		var targetArchive = $(this).data('value');
 		$('.page-toggle').val(targetArchive).change();
+	});
+
+	$('.navigate-to-info').on('click', function () {
+		var targetInfo = $(this).data('value');
+		$('.page-toggle').val(targetInfo).change();
 	});
 
 	$('.page-section').hide();

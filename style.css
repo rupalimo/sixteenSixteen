@@ -51,13 +51,17 @@ body {
 
 /* STYLING FOR TOP & BOTTOM 1616 TITLE HEADER */
 
-header, nav, main, footer  {
+header,
+nav,
+main,
+footer {
 	width: 50%;
 	min-width: 800px;
 	margin: 0 auto;
 }
 
-header, footer {
+header,
+footer {
 	text-align: center;
 	font-family: var(--secondary-font);
 }
@@ -67,7 +71,7 @@ header h3 {
 }
 
 header p {
-	margin: 0;
+	margin: 0.25em 0 0 0;
 	font-size: 12px;
 }
 
@@ -77,8 +81,8 @@ header p {
 
 .header__container img {
 	min-width: 20%;
-height: 60px;
-width: auto;
+	height: 60px;
+	width: auto;
 }
 
 footer {
@@ -234,7 +238,9 @@ h5,
 	text-decoration: none;
 }
 
-.archive__container, .exhibition__container, .artists__container {
+.archive__container,
+.exhibition__container,
+.artists__container {
 	margin: 2rem 0;
 }
 
@@ -278,15 +284,18 @@ h5,
 }
 
 @media (max-width: 1024px) {
-	header, nav, main, footer  {
-	width: 95%;
-	min-width: 95%;
-	margin: 0 auto;
-}
+	header,
+	nav,
+	main,
+	footer {
+		width: 95%;
+		min-width: 95%;
+		margin: 0 auto;
+	}
 }
 
 @media (max-width: 780px) {
-.printed--flex .printed--item {
-	width: 50%;
-}
+	.printed--flex .printed--item {
+		width: 50%;
+	}
 }

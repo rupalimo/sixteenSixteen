@@ -1,24 +1,3 @@
-$(document).ready(function () {
-	$('.page-toggle').on('change', function () {
-		var selectedClass = $(this).find(':selected').attr('data-show');
-
-		// Hide all sections and show only the selected one
-		$('.page-section').hide();
-		$(selectedClass).fadeIn();
-	});
-
-$('.navigate-to-tab').on('click', function () {
-	var targetArchive = $(this).data('value');
-	$('.page-toggle').val(targetArchive).change();
-});
-
-	$('.page-section').hide();
-	$('.page-toggle option:selected').each(function () {
-		var selectedClass = $(this).attr('data-show');
-		$(selectedClass).show();
-	});
-});
-
 var sixteensixteens = [
 	'1616-header/sixteen.svg',
 	'1616-header/sixteensixteeeeeen.svg',

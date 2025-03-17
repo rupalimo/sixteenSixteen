@@ -53,65 +53,52 @@
 
 		<main class="main__wrapper">
 			<div class="page-section exhibition">
-				<span><h5>Now</h5></span>
-				<a class="exhibition__container" href="" title="">
-					<div class="exhibition--details">
-						<h2>Date</h2>
-						<h2>Show's Name</h2>
-						<h2>Artist's Name</h2>
-					</div>
-					<div class="exhibition--img">
-						<img src="" title="exhibition img" width="200px" height="200px" />
-					</div>
-				</a>
-				<div class="horizontal-divider"></div>
-				<span><h5>Next</h5></span>
-				<a class="exhibition__container" href="" title="">
-					<div class="exhibition--details">
-						<h2>Date</h2>
-						<h2>Show's Name</h2>
-						<h2>Artist's Name</h2>
-					</div>
-					<div class="exhibition--img">
-						<img src="" title="" width="" />
-					</div>
-				</a>
-				<div class="horizontal-divider"></div>
-				<span><h5>Past</h5></span>
-				<a class="exhibition__container" href="" title="">
-					<div class="exhibition--details">
-						<h2>Date</h2>
-						<h2>Show's Name</h2>
-						<h2>Artist's Name</h2>
-					</div>
-					<div class="exhibition--img">
-						<img src="" title="" width="" />
-					</div>
-				</a>
-				<a class="exhibition__container" href="" title="">
-					<div class="exhibition--details">
-						<h2>Date</h2>
-						<h2>Show's Name</h2>
-						<h2>Artist's Name</h2>
-					</div>
-					<div class="exhibition--img">
-						<img src="" title="" width="" />
-					</div>
-				</a>
-				<a class="exhibition__container" href="" title="">
-					<div class="exhibition--details">
-						<h2>Date</h2>
-						<h2>Show's Name</h2>
-						<h2>Artist's Name</h2>
-					</div>
-					<div class="exhibition--img">
-						<img src="" title="" width="" />
-					</div>
-				</a>
+				<span class="tab__container">
+					<button
+						onclick="exhibitionToggle(event, 'now-exhibition')"
+						id="defaultExhibition"
+						class="tab--item exhibitionTab"
+					>
+						Now
+					</button>
+					<button
+						onclick="exhibitionToggle(event, 'next-exhibition')"
+						class="tab--item exhibitionTab"
+					>
+						Next
+					</button>
+				</span>
+
+				<div id="now-exhibition" class="exhibition__container">
+					<a href="" title="" target="_blank" class="exhibition--details">
+						<div class="exhibition--details">
+							<h2>Now Date</h2>
+							<h2>Show's Name</h2>
+							<h2>Artist's Name</h2>
+						</div>
+						<div class="exhibition--img">
+							<img src="" title="exhibition img" width="200px" height="200px" />
+						</div>
+					</a>
+				</div>
+
+				<div id="next-exhibition" class="exhibition__container">
+					<a href="" title="" target="_blank" class="exhibition--details">
+						<div class="exhibition--details">
+							<h2>Next Date</h2>
+							<h2>Show's Name</h2>
+							<h2>Artist's Name</h2>
+						</div>
+						<div class="exhibition--img">
+							<img src="" title="exhibition img" width="200px" height="200px" />
+						</div>
+					</a>
+				</div>
 				<button class="navigate-to-tab" data-value="archive">
-					view more
+					view archived exhibitions
 				</button>
 			</div>
+			
 			<div class="page-section archive">
 				<span class="tab__container">
 					<button
